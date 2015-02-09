@@ -1,0 +1,2 @@
+PODS_BMOBSDK_FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/BmobSDK"
+PODS_BMOBSDK_OTHER_LDFLAGS = -framework "BmobSDK" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreTelephony" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration"

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>One kilobyte (1 KB) is equal to:</string>
+		<string>1024 bytes</string>
+		<string>1000 bytes</string>
+		<string>1064 bytes</string>
+		<string>1256 bytes</string>
+		<string>1001 bytes</string>
+	</array>
+	<array>
+		<string>The computer abbreviation DB usually means:</string>
+		<string>Database</string>
+		<string>Data Block</string>
+		<string>Driver Boot</string>
+		<string>Double Byte</string>
+	</array>
+	<array>
+		<string>You need something to reduce the heat produced by the main components. What could you use?</string>
+		<string>Fan</string>
+		<string>Refrigerator</string>
+		<string>Igloo</string>
+		<string>Ice Cubes</string>
+	</array>
+	<array>
+		<string>If you need to sort a very large list of integers (billions); What efficient sorting algorithm would be your best bet?</string>
+		<string>Quicksort</string>
+		<string>selection sort</string>
+		<string>bubble sort</string>
+		<string>Heap sort</string>
+	</array>
+	<array>
+		<string>What FTP means?</string>
+		<string>File Transfer Protocol</string>
+		<string>Front Type Protocol</string>
+		<string>Fast Transport Protocol</string>
+		<string>Free Transmission Protocol</string>
+	</array>
+	<array>
+		<string>The book says I have to connect to LAN. What is LAN?</string>
+		<string>Local Area Network</string>
+		<string>Loading Alternative News</string>
+		<string>Linking Articulation Nodes</string>
+		<string>LIPS and NIPS</string>
+	</array>
+	<array>
+		<string>What are the three main search expressions (or operators) recognized by Boolean logic?</string>
+		<string>and;or;not</string>
+		<string>from;to;whom</string>
+		<string>and;or;but</string>
+		<string>search;keyboard;text</string>
+	</array>
+	<array>
+		<string>The computer abbreviation MODEM usually means:</string>
+		<string>Modulator;DEModulator</string>
+		<string>Mega Operations Director Enhanced Mail</string>
+		<string>Multiple Output Data Engineering Machine</string>
+		<string>Main Operating Disc Encoding Method</string>
+	</array>
+	<array>
+		<string>The Internet&apos;s design is based on being:</string>
+		<string>Unreliable</string>
+		<string>Fast</string>
+		<string>Accurate</string>
+		<string>Cheap</string>
+	</array>
+	<array>
+		<string>Which country invented the Internet?</string>
+		<string>USA</string>
+		<string>Britain</string>
+		<string>France</string>
+		<string>China</string>
+	</array>
+	<array>
+		<string>What is the binary representation of 34?</string>
+		<string>10010</string>
+		<string>11011</string>
+		<string>1100</string>
+		<string>10101</string>
+		<string>10011</string>
+	</array>
+	<array>
+		<string>OS stands for:</string>
+		<string>Operating System</string>
+		<string>Order of Significance</string>
+		<string>Open Software</string>
+		<string>Optical Sensor</string>
+	</array>
+	<array>
+		<string>What computing concept did we learn that involves the use of code you have already written?</string>
+		<string>Code Reuse</string>
+		<string>Iteration</string>
+		<string>Internet</string>
+		<string>Abstraction</string>
+	</array>
+	<array>
+		<string>What is the world&apos;s most widely used web browser?</string>
+		<string>Google Chrome</string>
+		<string>Internet Explorer</string>
+		<string>Safari</string>
+		<string>Mozilla Firefox</string>
+	</array>
+	<array>
+		<string>Errors that can be pointed out by a compiler are:</string>
+		<string>Syntax errors</string>
+		<string>Semantic errors</string>
+		<string>Logical errors</string>
+		<string>Internal errors</string>
+	</array>
+	<array>
+		<string>While programming; What gives your program/app the power to make decisions?</string>
+		<string>Conditionals</string>
+		<string>Iteration</string>
+		<string>Recursion</string>
+		<string>Abstraction</string>
+	</array>
+	<array>
+		<string>Which of below does not use cloud computing:</string>
+		<string>Google Map that show clouds on top of the map</string>
+		<string>Kindle book storing</string>
+		<string>Google Drive</string>
+		<string>Email</string>
+	</array>
+</array>
+</plist>

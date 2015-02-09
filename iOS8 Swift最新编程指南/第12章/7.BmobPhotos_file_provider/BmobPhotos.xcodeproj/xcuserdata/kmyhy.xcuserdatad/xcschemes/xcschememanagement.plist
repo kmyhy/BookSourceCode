@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>BmobPhotos.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>DocumentPicker.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>DocumentPickerFileProvider.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>E94C30821A348DEF0092ACAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E94C308F1A348DEF0092ACAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E94C30A71A3490570092ACAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E94C30B41A3490570092ACAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E993DF2C1A348C7900180852</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E993DF411A348C7900180852</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
