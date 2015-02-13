@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BC18BC43-2710-4618-ABEE-9539E47905A9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>VisualEffects</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>260B5F6710B1C3F45F76B3AE84B3D728AB85C81F</key>
+		<string>https://github.com/kmyhy/BookSourceCode.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS8 Swift最新编程指南/第19章/VisualEffectsStarter/VisualEffects.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>260B5F6710B1C3F45F76B3AE84B3D728AB85C81F</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kmyhy/BookSourceCode.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>260B5F6710B1C3F45F76B3AE84B3D728AB85C81F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>260B5F6710B1C3F45F76B3AE84B3D728AB85C81F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BookSourceCode</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -10,13 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     var popwinShowing = false
-    
+        
     @IBOutlet weak var containerBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerView: UIView!
     func setPopwinHidden(hidden:Bool,animated:Bool){
-        if !hidden {
-            //      updateBlur()
-        }
         
         popwinShowing = !hidden;
         let height = CGRectGetHeight(containerView.bounds)
@@ -52,5 +49,29 @@ class ViewController: UIViewController {
     }
 
 
+
+    func addVibrancyEffects(blurEffect:UIBlurEffect,blurView:UIVisualEffectView){
+        // 1
+        let vibrancyEffect = UIVibrancyEffect(forBlurEffect: blurEffect)
+        // 2
+        let vibrancyView = UIVisualEffectView(effect: vibrancyEffect)
+        vibrancyView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        // 3
+        vibrancyView.contentView.addSubview(containerView)
+        // 4
+        blurView.contentView.addSubview(vibrancyView)
+        
+        var constraints = [NSLayoutConstraint]()
+        
+        constraints.append(NSLayoutConstraint(item: vibrancyView,
+            attribute: .Height, relatedBy: .Equal,
+            toItem: blurView, attribute: .Height,
+            multiplier: 0.5, constant: 0))
+        constraints.append(NSLayoutConstraint(item: vibrancyView,
+            attribute: .Width, relatedBy: .Equal,
+            toItem: blurView, attribute: .Width,
+            multiplier: 1, constant: 0))
+        blurView.addConstraints(constraints)
+    }
 }
 

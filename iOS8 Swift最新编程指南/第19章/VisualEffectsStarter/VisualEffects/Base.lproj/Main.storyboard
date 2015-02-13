@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bj0-p0-K3P">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -87,64 +86,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="160"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAW-p6-4hg">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cot-0C-blJ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="160"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PNH-Gp-bMj">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="160"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUv-aY-al7">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cwK-ic-JNi">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="80"/>
-                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <blurEffect style="dark"/>
-                                        </visualEffectView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="WUv-aY-al7" secondAttribute="trailing" id="IAQ-1P-YV0"/>
-                                        <constraint firstItem="WUv-aY-al7" firstAttribute="leading" secondItem="PNH-Gp-bMj" secondAttribute="leading" id="fYq-JJ-5Tg"/>
-                                        <constraint firstItem="WUv-aY-al7" firstAttribute="top" secondItem="PNH-Gp-bMj" secondAttribute="top" id="nUG-aT-BnU"/>
-                                    </constraints>
-                                </view>
-                                <blurEffect style="light"/>
-                            </visualEffectView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSj-fg-9cI">
-                                <rect key="frame" x="165" y="30" width="100" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSj-fg-9cI">
+                                        <rect key="frame" x="150" y="30" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="XhY-gS-zXP"/>
+                                            <constraint firstAttribute="width" constant="100" id="mKm-gY-0Cl"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="helmet"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8el-XA-FAH">
+                                        <rect key="frame" x="350" y="30" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="3uW-xo-JhR"/>
+                                            <constraint firstAttribute="height" constant="100" id="H9P-J2-Ix1"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Facebook">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="0VK-nv-504"/>
-                                    <constraint firstAttribute="height" constant="100" id="qIn-mw-lph"/>
+                                    <constraint firstAttribute="centerX" secondItem="8el-XA-FAH" secondAttribute="centerX" constant="-100" id="0L3-FN-18s"/>
+                                    <constraint firstAttribute="centerY" secondItem="8el-XA-FAH" secondAttribute="centerY" id="EGR-xO-kmA"/>
+                                    <constraint firstAttribute="centerX" secondItem="rSj-fg-9cI" secondAttribute="centerX" constant="100" id="wVP-4c-VEE"/>
+                                    <constraint firstAttribute="centerY" secondItem="rSj-fg-9cI" secondAttribute="centerY" id="xsL-vv-Ya1"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="helmet">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8el-XA-FAH">
-                                <rect key="frame" x="342" y="30" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="7md-xC-Y97"/>
-                                    <constraint firstAttribute="width" constant="100" id="iP0-FS-zvs"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Facebook">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GAW-p6-4hg" firstAttribute="top" secondItem="Yk4-md-udV" secondAttribute="bottom" id="4bk-HS-Go5"/>
-                            <constraint firstAttribute="trailing" secondItem="GAW-p6-4hg" secondAttribute="trailing" id="D1C-RR-OTl"/>
-                            <constraint firstItem="WUv-aY-al7" firstAttribute="height" secondItem="NZw-ed-ya2" secondAttribute="height" multiplier="0.5" id="I2E-u1-0zj"/>
-                            <constraint firstAttribute="centerX" secondItem="rSj-fg-9cI" secondAttribute="centerX" constant="85" id="LNt-kW-73F"/>
-                            <constraint firstAttribute="centerY" secondItem="rSj-fg-9cI" secondAttribute="centerY" id="PfI-Qu-Aq6"/>
-                            <constraint firstAttribute="centerY" secondItem="8el-XA-FAH" secondAttribute="centerY" id="WwS-iW-u2r"/>
-                            <constraint firstItem="GAW-p6-4hg" firstAttribute="leading" secondItem="NZw-ed-ya2" secondAttribute="leading" id="bhR-XS-Q0j"/>
-                            <constraint firstItem="B4a-Yl-3di" firstAttribute="top" secondItem="GAW-p6-4hg" secondAttribute="bottom" id="cqR-bQ-Ujk"/>
-                            <constraint firstAttribute="centerX" secondItem="8el-XA-FAH" secondAttribute="centerX" constant="-92" id="jS1-2I-1TM"/>
+                            <constraint firstAttribute="trailing" secondItem="cot-0C-blJ" secondAttribute="trailing" id="4Wu-XM-oJd"/>
+                            <constraint firstItem="cot-0C-blJ" firstAttribute="top" secondItem="Yk4-md-udV" secondAttribute="bottom" id="WJf-US-vqF"/>
+                            <constraint firstItem="cot-0C-blJ" firstAttribute="leading" secondItem="NZw-ed-ya2" secondAttribute="leading" id="fEF-Ej-zd2"/>
+                            <constraint firstItem="B4a-Yl-3di" firstAttribute="top" secondItem="cot-0C-blJ" secondAttribute="bottom" id="pX5-Lu-chW"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="contentView" destination="cot-0C-blJ" id="th5-RG-bfS"/>
+                        <outlet property="leftButton" destination="rSj-fg-9cI" id="Ffq-zK-189"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Fv-nH-lvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
