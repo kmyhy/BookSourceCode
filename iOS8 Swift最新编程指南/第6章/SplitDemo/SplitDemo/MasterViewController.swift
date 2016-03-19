@@ -30,7 +30,7 @@ class MasterViewController: UITableViewController,PaletteSelectionContainer {
 //        self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
             let controllers = split.viewControllers
-            self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
+            self.detailViewController = (controllers[controllers.count-1] as! NavigationController).topViewController as? DetailViewController
         }
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "showDetailTargetChanged:",
@@ -41,9 +41,9 @@ class MasterViewController: UITableViewController,PaletteSelectionContainer {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
-            if let indexPath = self.tableView.indexPathForSelectedRow() {
-                let detailNav = segue.destinationViewController as UINavigationController
-                let detailVC  = detailNav.topViewController as DetailViewController
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let detailNav = segue.destinationViewController as! UINavigationController
+                let detailVC  = detailNav.topViewController as! DetailViewController
                 let palette   = objects[indexPath.row] as ColorPalette
                 detailVC.detailItem=palette
             }
@@ -71,7 +71,7 @@ class MasterViewController: UITableViewController,PaletteSelectionContainer {
         let palette=objects[indexPath.row]
         if palette.children != nil && palette.children.count > 0 {
             if palette.hasColors == false {
-                let newTable = storyboard?.instantiateViewControllerWithIdentifier("MasterVC") as MasterViewController
+                let newTable = storyboard?.instantiateViewControllerWithIdentifier("MasterVC") as! MasterViewController
                 newTable.objects = palette.children
                 newTable.title = palette.name
 //                navigationController?.pushViewController(newTable, animated: true)
@@ -84,7 +84,7 @@ class MasterViewController: UITableViewController,PaletteSelectionContainer {
         var segueWillPush = false
         let colorPalette = objects[indexPath.row] as ColorPalette
         if colorPalette.children == nil {
-            segueWillPush == false
+            segueWillPush = false
         }else if  colorPalette.hasColors == false {
             segueWillPush = showVCWillPush(self)
         } else {
@@ -94,9 +94,9 @@ class MasterViewController: UITableViewController,PaletteSelectionContainer {
         .DisclosureIndicator : .None
     }
     
-    override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+    override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "showDetail" {
-            if let selectedIndexPath = tableView.indexPathForSelectedRow() {
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 let palette=objects[selectedIndexPath.row]
                 return palette.hasColors
             }
@@ -105,7 +105,7 @@ class MasterViewController: UITableViewController,PaletteSelectionContainer {
         return true
     }
     func selectedPalette() -> ColorPalette? {
-        let selectedIndex = tableView.indexPathForSelectedRow()
+        let selectedIndex = tableView.indexPathForSelectedRow
         if let indexPath = selectedIndex {
             let palette=objects[indexPath.row]
             if palette.hasColors==true {
@@ -121,7 +121,7 @@ class MasterViewController: UITableViewController,PaletteSelectionContainer {
     }
     
     func showDetailTargetChanged(sender: AnyObject?) {
-        if let indexPaths = tableView.indexPathsForVisibleRows() {
+        if let indexPaths = tableView.indexPathsForVisibleRows {
             for indexPath in indexPaths as [NSIndexPath] {
                 let cell = tableView.cellForRowAtIndexPath(indexPath)
                 tableView(tableView, willDisplayCell: cell!,
