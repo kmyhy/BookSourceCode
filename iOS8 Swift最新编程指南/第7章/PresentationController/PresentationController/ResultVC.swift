@@ -34,7 +34,7 @@ class ResultVC: UITableViewController,UISearchResultsUpdating {
             var cell =
             tableView.dequeueReusableCellWithIdentifier("idCell",
                 forIndexPath: indexPath) as UITableViewCell
-            let question = searchResults[indexPath.row] as Question
+            let question = searchResults[indexPath.row] as! Question
             
             cell.textLabel?.text = question.quizQuestion
             
@@ -43,7 +43,7 @@ class ResultVC: UITableViewController,UISearchResultsUpdating {
     }
     override func tableView(tableView: UITableView,
         didSelectRowAtIndexPath indexPath: NSIndexPath) {
-            let question = searchResults[indexPath.row] as Question
+            let question = searchResults[indexPath.row] as! Question
             delegate?.searchResultSelected(question)
     }
     
@@ -56,7 +56,7 @@ class ResultVC: UITableViewController,UISearchResultsUpdating {
             "SELF.quizQuestion contains[c] %@", searchText)
         
         let tempArray =
-        self.questions.filteredArrayUsingPredicate(predicate!)
+        self.questions.filteredArrayUsingPredicate(predicate)
         
         searchResults = NSMutableArray(array: tempArray)
         
@@ -73,6 +73,6 @@ class ResultVC: UITableViewController,UISearchResultsUpdating {
             }
             
             filterContentForSearchText(
-                searchController.searchBar.text)
+                searchController.searchBar.text!)
     }
 }

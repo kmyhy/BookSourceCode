@@ -14,7 +14,7 @@ class TopicListVC: UITableViewController,SearchResultSelecting {
     var selectedQuestion: Question?
     var pagerVC: PaperVC? = nil
     func addSearchBar() {
-        var resultsController = ResultVC()
+        let resultsController = ResultVC()
 //        var resultsController = self.storyboard?.instantiateViewControllerWithIdentifier("idResultVC") as ResultVC
         resultsController.questions = questions!
         resultsController.delegate = self
@@ -28,7 +28,7 @@ class TopicListVC: UITableViewController,SearchResultSelecting {
     }
     func searchResultSelected(question:Question){
             pagerVC?.question = question
-            showDetailViewController(UINavigationController(rootViewController: pagerVC!)!, sender: self)
+            showDetailViewController(UINavigationController(rootViewController: pagerVC!), sender: self)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,12 +37,12 @@ class TopicListVC: UITableViewController,SearchResultSelecting {
         
         let controllers = splitViewController!.viewControllers
         pagerVC =
-            controllers[controllers.endIndex-1].topViewController
+            (controllers[controllers.endIndex-1] as! UINavigationController).topViewController
             as? PaperVC
         
         // Set the details controller with the
         // first country in the array
-        let question = questions?[0] as Question
+        let question = questions?[0] as! Question
         pagerVC?.question = question
         addSearchBar()
     }
@@ -77,7 +77,7 @@ class TopicListVC: UITableViewController,SearchResultSelecting {
         tableView.dequeueReusableCellWithIdentifier("idCell",
             forIndexPath: indexPath)as UITableViewCell
         
-        let question = questions?[indexPath.row] as Question
+        let question = questions?[indexPath.row] as! Question
         cell.textLabel?.text = "第 \(indexPath.row+1) 题"
         return cell
     }
@@ -88,7 +88,7 @@ class TopicListVC: UITableViewController,SearchResultSelecting {
         didSelectRowAtIndexPath indexPath: NSIndexPath) {
             selectedQuestion = questions?[indexPath.row] as? Question
             pagerVC?.question = selectedQuestion
-            showDetailViewController(UINavigationController(rootViewController: pagerVC!)!, sender: self)
+            showDetailViewController(UINavigationController(rootViewController: pagerVC!), sender: self)
     
     }
 }

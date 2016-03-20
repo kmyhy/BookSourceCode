@@ -30,7 +30,7 @@ class PaperVC: UIViewController,UIPopoverPresentationControllerDelegate{
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil);
         
         var contentViewController : CorrectAnswerVC = storyboard.instantiateViewControllerWithIdentifier(
-            "idCorrectAnswerVC") as CorrectAnswerVC
+            "idCorrectAnswerVC") as! CorrectAnswerVC
         // 2
         if question != nil {
                 contentViewController.correctAnswer = question!.quizAnswers[0]
@@ -104,10 +104,10 @@ class PaperVC: UIViewController,UIPopoverPresentationControllerDelegate{
         } else {
             message = "呃，再试试！"
         }
-        var alert = UIAlertController(title:nil, message:message, preferredStyle:UIAlertControllerStyle.ActionSheet)
+        let alert = UIAlertController(title:nil, message:message, preferredStyle:UIAlertControllerStyle.ActionSheet)
         alert.popoverPresentationController?.sourceView = view
         alert.popoverPresentationController?.sourceRect = sender.frame
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction!) in 
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: {(alert :UIAlertAction) in 
         }))
         self.presentViewController(alert, animated: true, completion: nil)
     }

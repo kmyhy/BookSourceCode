@@ -27,7 +27,7 @@ class CorrectAnswerVC: UIViewController {
     override func viewDidAppear(animated: Bool) {
         answerLabel.text = correctAnswer
         
-        var detailsButton: UIBarButtonItem =
+        let detailsButton: UIBarButtonItem =
         UIBarButtonItem(title: "关闭",
             style: UIBarButtonItemStyle.Plain,
             target: self, action: "close:")
