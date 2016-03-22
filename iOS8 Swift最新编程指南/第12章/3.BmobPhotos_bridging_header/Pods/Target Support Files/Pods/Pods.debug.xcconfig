@@ -1,6 +1,0 @@
-FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/BmobSDK"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/BmobSDK"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/BmobSDK"
-OTHER_LDFLAGS = -ObjC -l"Pods-BmobSDK" -framework "BmobSDK" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreLocation" -framework "CoreTelephony" -framework "MobileCoreServices" -framework "Security" -framework "SystemConfiguration"
-PODS_ROOT = ${SRCROOT}/Pods
