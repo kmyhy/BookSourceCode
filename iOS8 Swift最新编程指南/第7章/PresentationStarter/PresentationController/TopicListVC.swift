@@ -20,12 +20,12 @@ class TopicListVC: UITableViewController {
         
         let controllers = splitViewController!.viewControllers
         pagerVC =
-            controllers[controllers.endIndex-1].topViewController
+            (controllers[controllers.endIndex-1] as! UINavigationController).topViewController
             as? PaperVC
         
         // Set the details controller with the
         // first country in the array
-        let question = questions?[0] as Question
+        let question = questions?[0] as! Question
         pagerVC?.question = question
         
     }
@@ -60,7 +60,7 @@ class TopicListVC: UITableViewController {
         tableView.dequeueReusableCellWithIdentifier("idCell",
             forIndexPath: indexPath)as UITableViewCell
         
-        let question = questions?[indexPath.row] as Question
+        let question = questions?[indexPath.row] as! Question
         cell.textLabel?.text = "第 \(indexPath.row+1) 题"
         return cell
     }
@@ -71,7 +71,7 @@ class TopicListVC: UITableViewController {
         didSelectRowAtIndexPath indexPath: NSIndexPath) {
             selectedQuestion = questions?[indexPath.row] as? Question
             pagerVC?.question = selectedQuestion
-            showDetailViewController(UINavigationController(rootViewController: pagerVC!)!, sender: self)
+            showDetailViewController(UINavigationController(rootViewController: pagerVC!), sender: self)
     
     }
 }

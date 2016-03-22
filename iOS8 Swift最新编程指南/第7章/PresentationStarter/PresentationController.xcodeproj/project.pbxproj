@@ -168,6 +168,8 @@
 		E968C15C19F7D6E700B12B12 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = yanghongyan;
 				TargetAttributes = {
@@ -423,6 +425,7 @@
 				E968C18519F7D6E800B12B12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E968C18619F7D6E800B12B12 /* Build configuration list for PBXNativeTarget "PresentationControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +434,7 @@
 				E968C18819F7D6E800B12B12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -39,7 +39,7 @@ extension UINavigationController {
 extension UISplitViewController {
         override func showDetailVCWillPush(sender:AnyObject?) -> Bool {
         if collapsed {
-            if let primaryVC = viewControllers.last as? UIViewController {
+            if let primaryVC = viewControllers.last{
                 return primaryVC.showVCWillPush(sender)
             }
             return false

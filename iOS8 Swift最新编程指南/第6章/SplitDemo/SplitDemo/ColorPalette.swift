@@ -15,10 +15,10 @@ class ColorPalette: NSObject {
 }
 
 func dataSource()->[ColorPalette]{
-    var vibrant=ColorPalette()
+    let vibrant=ColorPalette()
     vibrant.name="Vibrant"
     
-    var logis4=ColorPalette()
+    let logis4=ColorPalette()
     logis4.name="Logis 4"
     vibrant.children=[logis4]
     logis4.hasColors=true
@@ -36,7 +36,7 @@ func dataSource()->[ColorPalette]{
     
     logis4.children=[color1,color2,color3,color4,color5]
     
-    var candyCoated=ColorPalette()
+    let candyCoated=ColorPalette()
     candyCoated.name="Candy Coated"
     vibrant.children!.append(candyCoated)
     candyCoated.hasColors=true
@@ -53,10 +53,10 @@ func dataSource()->[ColorPalette]{
     color5.name="#00aab5"
     candyCoated.children=[color1,color2,color3,color4,color5]
     
-    var monochrome=ColorPalette()
+    let monochrome=ColorPalette()
     monochrome.name="Monochrome"
     
-    var blues=ColorPalette()
+    let blues=ColorPalette()
     blues.name="Blues"
     monochrome.children=[blues]
     blues.hasColors=true
@@ -73,7 +73,7 @@ func dataSource()->[ColorPalette]{
     color5.name="#00aab5"
     blues.children=[color1,color2,color3,color4,color5]
     
-    var smooth=ColorPalette()
+    let smooth=ColorPalette()
     smooth.name="Smooth"
     
     return [vibrant,monochrome,smooth]
@@ -87,9 +87,9 @@ func UIColorFromHexString(hex:String)->UIColor{
     return UIColorFromUInt32(rgbValue);
 }
 func UIColorFromUInt32(rgbHex:CUnsignedInt)->UIColor{
-    var red:CGFloat = CGFloat((rgbHex & 0xFF0000) >> 16) / 255.0
-    var green:CGFloat = CGFloat((rgbHex & 0x00FF00) >> 8) / 255.0
-    var blue:CGFloat = CGFloat(rgbHex & 0x0000FF) / 255.0
+    let red:CGFloat = CGFloat((rgbHex & 0xFF0000) >> 16) / 255.0
+    let green:CGFloat = CGFloat((rgbHex & 0x00FF00) >> 8) / 255.0
+    let blue:CGFloat = CGFloat(rgbHex & 0x0000FF) / 255.0
     
     return UIColor(red: red, green: green, blue: blue, alpha: 1)
 }

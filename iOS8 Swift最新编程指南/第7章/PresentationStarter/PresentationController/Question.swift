@@ -24,10 +24,10 @@ class Question: NSObject {
             var question = Question();
             if let array = item as? NSArray {
                 if array.count > 1 {
-                    question.quizQuestion = item[0] as String
+                    question.quizQuestion = item[0] as! String
                     
                     for var i=1; i<array.count; i++ {
-                        question.quizAnswers.append(array[i] as String)
+                        question.quizAnswers.append(array[i] as! String)
                     }
                     
                 }

@@ -43,13 +43,13 @@ class DetailViewController: UIViewController,PaletteDisplayContainer {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if let colorPalette=detailItem {
+        if let _ = detailItem {
             makeAllContentHidden(false)
             self.configureView()
         }else{
             if let empty = storyboard?
                 .instantiateViewControllerWithIdentifier(
-                "NoPaletteSelected") as? UIViewController {
+                "NoPaletteSelected") {
                     showViewController(empty, sender: self)
             }
             makeAllContentHidden(true)

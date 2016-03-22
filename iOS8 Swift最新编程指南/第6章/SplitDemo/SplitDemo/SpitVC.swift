@@ -15,16 +15,16 @@ class SplitVC: UISplitViewController, UISplitViewControllerDelegate {
     }
    
     func splitViewController(splitController: UISplitViewController, collapseSecondaryViewController secondaryViewController:
-        UIViewController!,
+        UIViewController,
         ontoPrimaryViewController primaryViewController:
-        UIViewController!) -> Bool {
+        UIViewController) -> Bool {
         if let selectionCont = primaryViewController as?
         PaletteSelectionContainer {
         if let displayCont = secondaryViewController as?
         PaletteDisplayContainer {
         let selectedPalette = selectionCont.selectedPalette()
         let displayedPalette = displayCont.displayingPalette()
-        if selectedPalette? != nil && selectedPalette == displayedPalette {
+        if selectedPalette != nil && selectedPalette == displayedPalette {
             return false
         }
         } }
@@ -33,14 +33,14 @@ class SplitVC: UISplitViewController, UISplitViewControllerDelegate {
     }
     
     func splitViewController(splitViewController: UISplitViewController,
-    separateSecondaryViewControllerFromPrimaryViewController primaryViewController: UIViewController!) -> UIViewController? {
+    separateSecondaryViewControllerFromPrimaryViewController primaryViewController: UIViewController) -> UIViewController? {
         if let paletteDisplayCont = primaryViewController as? PaletteDisplayContainer {
         if paletteDisplayCont.displayingPalette() != nil{
         return nil
         }
         }
-        let vc = storyboard? .instantiateViewControllerWithIdentifier(
-        "NoPaletteSelected") as UIViewController
+        let vc = (storyboard? .instantiateViewControllerWithIdentifier(
+        "NoPaletteSelected"))! as UIViewController
         return NavigationController(rootViewController: vc)
     }
 }
